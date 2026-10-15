@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --saudi-green: #006C35;
+    --saudi-dark: #004D25;
+    --saudi-light: #0B8246;
+    --royal-gold: #D4AF37;
+    --royal-gold-dark: #B88E18;
+  }
+
+  body {
+    font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  }
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b1320;
+  color: #f1f5f9;
+}
+
+/* Custom scrollbars and printing support for certificates */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .certificate-print-container {
+    box-shadow: none !important;
+    border-width: 3px !important;
+    max-width: 100% !important;
+  }
+}

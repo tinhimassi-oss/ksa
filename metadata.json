@@ -1,0 +1,8 @@
+{
+  "name": "Remix منصة الاختبارات المدرسية التفاعلية - السعودية",
+  "description": "منصة وطنية تفاعلية للطلاب في المملكة العربية السعودية لنشر وحل الاختبارات المدرسية المباشرة لجميع المراحل من الأول الابتدائي حتى الثالث الثانوي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
